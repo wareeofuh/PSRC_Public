@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- BoxIcons Min CSS -->
+    <link rel="stylesheet" href="assets/css/boxicons.min.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!-- Odometer Min CSS -->
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <!-- MeanMenu CSS -->
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Dark Style CSS -->
+    <link rel="stylesheet" href="assets/css/dark-style.css">
+
+    <title>Pancreatic Cancer Stromal Reprogramming Consortium (PSRC)</title>
+
+    <link rel="icon" type="image/png" href="assets/img/PSRC_logo_small.png">
+    <style>
+        .event-details-panel {
+            position: fixed;
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            max-width: 300px;
+            z-index: 1000;
+            opacity: 0; /* Start with opacity 0 */
+            transform: translateY(-20px); /* Start slightly above its final position */
+            transition: opacity 0.1s ease-in-out, transform 0.3s ease-in-out; /* Add transition properties */
+            cursor: pointer;
+        }
+
+        .pointer {
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border-color: transparent;
+            border-style: solid;
+            border-width: 11px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dark/Light Toggle -->
+    <div class="dark-version">
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- Start Preloader Area -->
+    <div class="preloader-area">
+        <div class="spinner">
+            <div class="inner">
+                <div class="disc"></div>
+                <div class="disc"></div>
+                <div class="disc"></div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Area -->
+    <!-- Start Top Bar Area -->
+    <div class="top-bar-area">
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center">
+                <!--<div class="col-lg-9 col-md-12">
+                    <div class="top-bar-info">
+                        <li><span>Name:</span> Mendoza Perez,Julia R</li>
+                        <li><span>Phone:</span> <a href="tel:1-(713) 563-1757">+1-713-563-1757</a></li>
+                        <li><span>Email:</span> <a href="mailto:jrmendoza@mdanderson.org">jrmendoza@mdanderson.org</a></li>
+                    </div>
+                </div>-->
+
+                <div class="col-lg-3 col-md-12">
+                    <!--<ul class="top-bar-social">
+                        <li>
+                            <span>Follow PSRC on:</span>
+                        </li>-->
+                    <!--<li><a href="#" target="_blank"><i class="bx bxl-facebook"></i></a></li>-->
+                    <!--<li><a href="https://twitter.com/PSRC" target="_blank"><i class="bx bxl-twitter"></i>@PSRC</a></li>-->
+                    <!--<li><a href="#" target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="bx bxl-instagram"></i></a></li>-->
+                    <!--</ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Bar Area -->
+    <!-- Start Navbar Area -->
+    <div class="navbar-area navbar-area-with-position-relative">
+        <div class="strax-responsive-nav">
+            <div class="container">
+                <div class="strax-responsive-menu">
+                    <div class="logo black-logo">
+                        <a href="index.html">
+                            <img src="assets/img/PSRC_logo_small.png" alt="logo">
+                        </a>
+                    </div>
+                    <div class="logo white-logo">
+                        <a href="index.html">
+                            <img src="assets/img/PSRC_logo_small.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="strax-nav">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a2 class="navbar-brand black-logo" href="index.html">
+                        <!--<h2>Welcome to <hx>PSRC</hx></h2>-->
+                        <!--<img src="assets/img/PSRC_logo_small.png" alt="logo">-->
+                        <h2>Welcome to <img src="assets/img/PSRC_logo_small_text.png" alt="logo"></h2>
+                    </a2>
+                    <a2 class="navbar-brand white-logo" href="index.html">
+                        <!--<h2>Welcome to <hx>PSRC</hx></h2>-->
+                        <!--<img src="assets/img/PSRC_logo_small.png" alt="logo">-->
+                        <h2>Welcome to <img src="assets/img/PSRC_logo_small_text.png" alt="logo"></h2>
+                    </a2>
+
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="index.html#Home" class="nav-link active">
+                                    Home
+                                    <!--<i class='bx bx-chevron-down'></i>-->
+                                </a>
+
+                                <!--<ul class="dropdown-menu mega-dropdown-menu">
+            <li class="nav-item">
+                <h3>With Animation</h3>
+                <a href="index.html" class="nav-link">Home One (IT Startup)</a>
+                <a href="index-it-2.html" class="nav-link">Home Two (IT Startup)</a>
+                <a href="index-it-3.html" class="nav-link">Home Three (IT Startup)</a>
+                <a href="index-saas.html" class="nav-link">Home Four (SaaS Startup)</a>
+                <a href="index-3.html" class="nav-link">Home Five (Chatbot)</a>
+                <a href="index-4.html" class="nav-link">Home Six (Chatbot)</a>
+                <a href="index-5.html" class="nav-link">Home Seven (Chatbot)</a>
+                <a href="index-digital-marketing-agency.html" class="nav-link">Home Eight (Digital Marketing Agency)</a>
+                <a href="index-9.html" class="nav-link">Home Nine (SEO Marketing)</a>
+                <a href="index.html" class="nav-link active">Home Ten (IT Solution)</a>
+                <a href="index-11.html" class="nav-link">Home Eleven (Marketing Experts)</a>
+            </li>
+
+            <li class="nav-item">
+                <h3>Without Animation</h3>
+                <a href="index-without-animation.html" class="nav-link">Home One (IT Startup)</a>
+                <a href="index-it-2-without-animation.html" class="nav-link">Home Two (IT Startup)</a>
+                <a href="index-it-3-without-animation.html" class="nav-link">Home Three (IT Startup)</a>
+                <a href="index-saas-without-animation.html" class="nav-link">Home Four (SaaS Startup)</a>
+                <a href="index-3-without-animation.html" class="nav-link">Home Five (Chatbot)</a>
+                <a href="index-4-without-animation.html" class="nav-link">Home Six (Chatbot)</a>
+                <a href="index-5-without-animation.html" class="nav-link">Home Seven (Chatbot)</a>
+                <a href="index-digital-marketing-agency-without-animation.html" class="nav-link">Home Eight (Digital Marketing Agency)</a>
+                <a href="index-9-without-animation.html" class="nav-link">Home Nine (SEO Marketing)</a>
+                <a href="index-10-without-animation.html" class="nav-link">Home Ten (IT Solution)</a>
+                <a href="index-11-without-animation.html" class="nav-link">Home Eleven (Marketing Experts)</a>
+            </li>
+        </ul>-->
+                            </li>
+                            <!--<li class="nav-item">
+        <a href="#Objective" class="nav-link">Objective</a>
+    </li>-->
+
+                            <li class="nav-item">
+                                <a href="index.html#AboutUs" class="nav-link">About Us</a>
+                            </li>
+
+                            <!--<li class="nav-item">
+        <a href="#PASSCODE" class="nav-link">PASSCODE</a>
+    </li>-->
+
+                            <li class="nav-item">
+                                <!--<a href="index.html#U01" class="nav-link">
+        Projects-->
+                                <!--<i class='bx bx-chevron-down'></i>-->
+                                <!--</a>-->
+                                <!--<ul class="dropdown-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    Services
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="services-1.html" class="nav-link">Services Style One</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="services-2.html" class="nav-link">Services Style Two</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="services-3.html" class="nav-link">Services Style Three</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="single-service.html" class="nav-link">Service Details</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Features</a>
+                <ul class="dropdown-menu">
+                    <li class="nav-item">
+                        <a href="features-1.html" class="nav-link">Features Style One</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="features-2.html" class="nav-link">Features Style Two</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a href="team.html" class="nav-link">Team</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#" class="nav-link">Log In</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="sign-up.html" class="nav-link">Sign Up</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="faq.html" class="nav-link">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="error-404.html" class="nav-link">404 Error</a>
+            </li>
+        </ul>-->
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Centers <i class='bx bx-chevron-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="index.html#U01" class="nav-link">All Centers</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_Columbia.html" class="nav-link">Columbia University Health Sciences</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_Dana-Farber.html" class="nav-link">Dana-Farber Cancer Institute</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_Purdue.html" class="nav-link">Purdue University</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_UCSD.html" class="nav-link">University of California, San Diego</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_Michigan.html" class="nav-link">University of Michigan</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_UNC.html" class="nav-link">University of North Carolina at Chapel Hill Lineberger Comprehensive Cancer Center</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_MDACC.html" class="nav-link">MD Anderson Cancer Center</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team_NCI.html" class="nav-link">NCI</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="member.html" class="nav-link">Associate Members</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="working_groups.html" class="nav-link">Working Groups</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="news.html" class="nav-link">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <!--<a href="publication.html" class="nav-link">Publication</a>-->
+                                <a href="#" class="nav-link">Publication <i class='bx bx-chevron-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="Publication.html" class="nav-link">Publication</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="pubstat.html" class="nav-link" target="blank" >Publication Details</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Events <i class='bx bx-chevron-down'></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="calendar.html" class="nav-link">PSRC Event Calendar</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html#ContactUs" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://mdandersonorg.sharepoint.com/teams/PSRC/" target="_blank" class="nav-link">Log In</a>
+                            </li>
+                        </ul>
+
+                        <!--<div class="others-options">
+                            <a href="#" class="default-btn black-btn">
+                                <i class="bx bx-log-in"></i>Log In<span></span>
+                            </a>
+                        </div>-->
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="others-option-for-responsive">
+            <div class="container">
+                <div class="dot-menu">
+                    <div class="inner">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <div class="circle circle-three"></div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="option-inner">
+                        <div class="others-options">
+                            <a href="#" class="optional-btn">
+                                <i class="bx bx-log-in"></i>Log In<span></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+    <!------------------------------------------------------------------------------------------------------------------------------------------->
+    <!--<div class="is-analysis-area ptb-100" id="ContactUs">-->
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 col-md-12 wow animate__animated animate__fadeInUp">
+                <h1 style="text-align: center">PSRC Event Calendar</h1>
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div>
+    <!--</div>-->
+
+    <div class="is-expertise-area ptb-100" id="MyCalendar">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="is-expertise-area ptb-100" id="MyCalendar">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-10">
+                    <h1 style="text-align: center">PSRC Event Calendar</h1>
+                    <div id='calendar'></div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Start Footer Area -->
+    <footer class="footer-area-with-black-color pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-3 col-sm-3">
+                    <div class="single-footer-widget">
+                        <div class="logo">
+                            <a href="index.html"><img src="assets/img/PSRC_logo_small.png" alt="image"></a>
+                        </div>
+                        <p>Pancreatic Cancer Stromal Reprogramming Consortium (PSRC)</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 col-md-3 col-sm-3">
+                    <div class="single-footer-widget ps-5">
+                        <h3>Consortia</h3>
+
+                        <ul class="services-list">
+                            <li><a href="index.html#AboutUs">About Us</a></li>
+                            <li><a href="index.html#U01">All Centers</a></li>
+                            <li><a href="index.html#ContactUs">Contact Us</a></li>
+                            <li><a href="news.html" target="_blank">News</a></li>
+                            <li><a href="publication.html" target="_blank">Publication</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--<div class="col-lg-2 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+            <h3>Support</h3>
+
+            <ul class="support-list">
+                <li><a href="faq.html">FAQ's</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="about.html">Community</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>-->
+                <!--<div class="col-lg-4 col-md-6 col-sm-6">
+    <div class="single-footer-widget">
+        <h3>Contact Info</h3>
+
+        <ul class="footer-contact-info">-->
+                <!--<li>Location: <a href="https://goo.gl/maps/MQ78iGP5g9VgZcJ38" target="_blank">6th Floor, Elegant Tower, York, USA</a></li>-->
+                <!--<li>Email: <a href="mailto:hildesheimj@mail.nih.gov">hildesheimj@mail.nih.gov</a></li>
+                <li>Phone: <a href="tel:+2402766220">+0 (240) 276-6220</a></li>
+                <li>Fax: <a href="tel:+2402767866">+0 (240) 276-7866</a></li>
+            </ul>
+        </div>
+    </div>-->
+            </div>
+
+            <div class="copyright-area">
+                <p>Copyright PSRC 2023 @ All rights reserved. </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+    <div class="go-top"><i class='bx bx-chevron-up'></i></div>
+
+    <!-- jQuery Min JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Min JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Magnific Popup Min JS -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Appear Min JS -->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <!-- Odometer Min JS -->
+    <script src="assets/js/odometer.min.js"></script>
+    <!-- Owl Carousel Min JS -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- MeanMenu JS -->
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <!-- WOW Min JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Message Conversation JS -->
+    <script src="assets/js/conversation.js"></script>
+    <!-- AjaxChimp Min JS -->
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- Form Validator Min JS -->
+    <script src="assets/js/form-validator.min.js"></script>
+    <!-- Contact Form Min JS -->
+    <script src="assets/js/contact-form-script.js"></script>
+    <!-- Particles Min JS -->
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/custom-particles.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    <style>
+
+        body {
+            margin: 20px 10px;
+            padding: 0;
+            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+        #calendar {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    </style>
+    <!-- fullcalendar.io-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <script>
+ 
+        document.addEventListener('DOMContentLoaded', function () {
+            var panels = {}; // Object to store panels
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                dayMaxEvents: true,
+                headerToolbar: {
+                    left: 'prevYear,prev,next,nextYear today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    //right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+                },
+                views: {
+                    listMonth: { // name of view
+                        titleFormat: { year: 'numeric', month: '2-digit', day: '2-digit', titleHTML: 'September' },
+                         events: [
+                             { title: 'Meeting', start: '2023-09-19T13:00:00' }
+                        ]
+                        // other view-specific options here
+                    }
+                },
+                initialView: 'dayGridMonth',
+                events: [
+                    {
+                        title: 'PSRC SC Face-to-Face Meeting hosted by the University of Illinois Urbana-Champaign',
+                        start: '2026-03-30T07:30:00',
+                        end: '2026-03-30T17:45:00',
+                        allDay: false,
+                        description: 'Monday, March 30, 2026 | 7:30 am – 5:45 pm CT',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Virtual Fall Meeting',
+                        start: '2025-10-07T13:00:00',
+                        end: '2025-10-08T17:00:00',
+                        allDay: false,
+                        description: 'Tuesday, October 07, 2025 to Wednesday, October 08, 2025',
+                        display: 'block'
+                    },
+                    {
+                        title: 'F2F PSRC SC Annual Meeting - UNC Chapel Hill',
+                        start: '2025-03-24T08:00:00',
+                        end: '2025-03-25T17:00:00',
+                        allDay: false,
+                        description: 'Monday, March 24, 2025 to Tuesday, March 25, 2025 (All day) in UNC Chapel Hill',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Network-Wide Progress virtual meeting',
+                        start: '2024-12-03T08:00:00',
+                        end: '2024-12-03T17:00:00',
+                        allDay: false,
+                        description: 'Tuesday December 3, 2024 from 9:00 am – 4:30 pm CT virtual meeting',
+                        display: 'block'
+                    },
+
+                    {
+                        title: 'PSRC-ARTNet Joint Annual Meeting',
+                        start: '2024-01-17T08:00:00',
+                        end: '2024-01-18T17:00:00',
+                        allDay: false,
+                        description: 'Wednesday, January 17, 2024 to Thursday, January 18, 2024 (All day) in Houston TX',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2023-09-19T13:00:00',
+                        end: '2023-09-19T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2023-10-17T13:00:00',
+                        end: '2023-10-17T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2023-11-21T13:00:00',
+                        end: '2023-11-21T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2023-12-19T13:00:00',
+                        end: '2023-12-19T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-01-16T13:00:00',
+                        end: '2024-01-16T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-02-20T13:00:00',
+                        end: '2024-02-20T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-03-19T13:00:00',
+                        end: '2024-03-19T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-04-16T13:00:00',
+                        end: '2024-04-16T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-05-21T13:00:00',
+                        end: '2024-05-21T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-06-18T13:00:00',
+                        end: '2024-06-18T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-07-16T13:00:00',
+                        end: '2024-07-16T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'BBWG Monthly Meeting',
+                        start: '2024-08-20T13:00:00',
+                        end: '2024-08-20T14:00:00',
+                        allDay: false,
+                        description: 'PSRC BBWG - Monthly Meeting Every month on the Third Tuesday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2023-09-22T13:00:00',
+                        end: '2023-09-22T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2023-10-27T13:00:00',
+                        end: '2023-10-27T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    //{
+                    //    title: 'PSRC Monthly SC Meeting',
+                    //    start: '2023-11-24T13:00:00',
+                    //    end: '2023-11-24T14:00:00',
+                    //    allDay: false,
+                    //    description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                    //    display: 'block'
+                    //},
+                    //{
+                    //    title: 'PSRC Monthly SC Meeting',
+                    //    start: '2023-12-22T13:00:00',
+                    //    end: '2023-12-22T14:00:00',
+                    //    allDay: false,
+                    //    description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                    //    display: 'block'
+                    //},
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-01-26T13:00:00',
+                        end: '2024-01-26T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-02-23T13:00:00',
+                        end: '2024-02-23T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-03-22T13:00:00',
+                        end: '2024-03-22T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-04-26T13:00:00',
+                        end: '2024-04-26T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-05-24T13:00:00',
+                        end: '2024-05-24T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC SC Annual Meeting San Diego, CA',
+                        start: '2024-06-06T15:00:00',
+                        end: '2024-06-07T24:00:00',
+                        allDay: true,
+                        description: 'PSRC SC Annual Meeting San Diego, CA Day 1: Thursday,  June 6, 2024 from 3:00 pm - 6:00 pm PT Day 2: Friday, June 7, 2024 from 8: 00 am - 4: 00 pm PT',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-06-28T13:00:00',
+                        end: '2024-06-28T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-07-26T13:00:00',
+                        end: '2024-07-26T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+                    {
+                        title: 'PSRC Monthly SC Meeting',
+                        start: '2024-08-23T13:00:00',
+                        end: '2024-08-23T14:00:00',
+                        allDay: false,
+                        description: 'PSRC Monthly Steering Committee (SC) Meeting Every month on the Fourth Friday from 1:00 pm - 2:00 pm(CST)',
+                        display: 'block'
+                    },
+
+                ],
+                //eventColor: '#13c4a1',
+                //eventTimeFormat: {
+                //    hour: 'numeric',
+                //    minute: '2-digit',
+                //    meridiem: 'short'
+                //},
+                eventContent: function (arg) {
+
+                    var ampm = arg.event.start.getHours() < 12 ? "a" : "p";
+                    var hours = arg.event.start.getHours() == 0 ? "12" : arg.event.start.getHours() > 12 ? arg.event.start.getHours() - 12 : arg.event.start.getHours();
+                    var minutes = (arg.event.start.getMinutes() < 10 ? "0" : "") + arg.event.start.getMinutes();
+                    var formattedTime = hours + ":" + minutes + ampm;
+
+                    var eampm = arg.event.end.getHours() < 12 ? "a" : "p";
+                    var ehours = arg.event.end.getHours() == 0 ? "12" : arg.event.end.getHours() > 12 ? arg.event.end.getHours() - 12 : arg.event.end.getHours();
+                    var eminutes = (arg.event.end.getMinutes() < 10 ? "0" : "") + arg.event.end.getMinutes();
+                    var eformattedTime = ehours + ":" + eminutes + eampm;
+
+                    let startTimeStr = formattedTime.toString();
+                    let endTimeStr = eformattedTime.toString();
+
+                    // Split the event title into multiple lines
+                    var titleLines = arg.event.title.split('\n');
+
+                    // Create an HTML string with line breaks
+                    var titleHTML = "<div>" + startTimeStr + " - " + endTimeStr + " CST</div>";
+                    for (var i = 0; i < titleLines.length; i++) {
+                        titleHTML += '<div class="event-title-line">' + titleLines[i] + '</div>';
+                    }
+
+                    // Create a container element for the event content
+                    var eventContent = document.createElement('div');
+                    eventContent.innerHTML = titleHTML;
+
+                    return { domNodes: [eventContent] };
+                }
+                , eventMouseLeave: function (info) {
+                    //alert("hey Mouse Leave");
+                    var eventId = info.event._def.defId;
+                    var event = info.event;
+                    console.log(event);
+                    panels[eventId].style.display = 'none';
+                    // Remove the panel from the object and DOM
+                    delete panels[eventId];
+                    panels[eventId].remove();
+                }
+               ,
+                eventClick: function (info) {
+
+                    var eventId = info.event._def.defId;
+                    var event = info.event;
+                    console.log(event);
+
+                    // Check if a panel for this event already exists
+                    if (!panels[eventId]) {
+
+                        var ampm = event.start.getHours() < 12 ? "am" : "pm";
+                        var hours = event.start.getHours() == 0 ? "12" : event.start.getHours() > 12 ? event.start.getHours() - 12 : event.start.getHours();
+                        var minutes = (event.start.getMinutes() < 10 ? "0" : "") + event.start.getMinutes();
+                        var formattedTime = hours + ":" + minutes + ampm;
+
+                        var eampm = event.end.getHours() < 12 ? "am" : "pm";
+                        var ehours = event.end.getHours() == 0 ? "12" : event.end.getHours() > 12 ? event.end.getHours() - 12 : event.end.getHours();
+                        var eminutes = (event.end.getMinutes() < 10 ? "0" : "") + event.end.getMinutes();
+                        var eformattedTime = ehours + ":" + eminutes + eampm;
+
+                        let startTimeStr = formattedTime.toString();
+                        let endTimeStr = eformattedTime.toString();
+
+                        // Create a new panel div
+                        var panelDiv = document.createElement('div');
+                        panelDiv.className = 'event-details-panel';
+
+                        // Populate the panel content
+                        var panelContent = '<div>' + event.title + '</div>';
+                        panelContent += '<p><strong>Time:</strong> ' + startTimeStr + ' - ' + endTimeStr + ' CST</p>';
+                        panelContent += "<p>" + event.extendedProps.description + "</p>";
+
+                        //alert(startTimeStr);
+                        panelDiv.innerHTML = panelContent;
+                        // Add the panel to the DOM
+                        document.body.appendChild(panelDiv);
+                        // Calculate the event's position
+                        var eventPosition = info.jsEvent.target.getBoundingClientRect();
+                        // Set the panel's position based on the event
+                        var panelHeight;
+                        // Use setTimeout to delay the height measurement
+                        setTimeout(function () {
+                            panelHeight = panelDiv.clientHeight;
+                            panelDiv.style.top = ((eventPosition.top + eventPosition.height / 2) - (panelDiv.clientHeight / 2)) + 'px';
+                            panelDiv.style.left = (eventPosition.right + 11) + 'px';
+                        }, 0); // You can use a small delay like 0 milliseconds
+
+                        //pointer div
+                        var pointerDiv = document.createElement('div');
+                        pointerDiv.className = "pointer";
+                        pointerDiv.style.top = "50%";
+                        pointerDiv.style.left = "-11px";
+                        pointerDiv.style.marginTop = "-11px";
+                        pointerDiv.style.borderRightColor = "rgba(0, 0, 0, .25)";
+                        pointerDiv.style.borderLeftWidth = "0";
+                        panelDiv.appendChild(pointerDiv);
+
+                        // Show the panel with animation
+                        panelDiv.style.opacity = '1'; // Fade in the panel
+                        //panelDiv.style.transform = 'translateY(100)'; // Slide down to its final position
+                        panelDiv.style.display = 'block';
+                        setTimeout(function () {
+                            panelDiv.style.transform = 'translateY(0)'; // Slide down to its final position
+                        }, 10);
+
+                        // Store the panel reference in the object
+                        panels[eventId] = panelDiv;
+                        // Close the panel when clicking on it
+                        panelDiv.addEventListener('click', function () {
+                            panelDiv.style.display = 'none';
+                            // Remove the panel from the object and DOM
+                            delete panels[eventId];
+                            panelDiv.remove();
+                            
+                        });
+                    } else {
+
+                        panels[eventId].style.display = 'none';
+                        // Remove the panel from the object and DOM
+                        delete panels[eventId];
+                        panels[eventId].remove();
+                        
+                    }
+                }
+
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
